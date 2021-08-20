@@ -182,3 +182,24 @@ Altm_pval_UNCOND_vis <- function(){
     
     p
 }
+
+Comparison_pval_vis <- function(){
+    set.seed(42)
+    data <- data.frame(variable = runif(1000))
+    
+    p <- ggplot(data = data) +
+        ggtitle("Comparison for uniform distribution") +
+        geom_violin(aes(x = 1, y = variable),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p
+}
