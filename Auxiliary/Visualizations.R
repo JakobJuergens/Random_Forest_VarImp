@@ -189,9 +189,9 @@ Comparison_pval_vis <- function(){
     
     p <- ggplot(data = data) +
         ggtitle("Comparison for uniform distribution") +
-        geom_violin(aes(x = 1, y = variable),
+        geom_violin(aes(x = 1, y = variable), fill = 'grey',
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
-        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+        annotate("text", x =0.7, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
         theme_light() +
         theme(legend.position = "none") +
