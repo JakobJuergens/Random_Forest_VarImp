@@ -444,6 +444,28 @@ Altm_pval_UNCOND_vis_2 <- function(){
     p
 }
 
+Altm_pval_COND_vis_2 <- function(){
+    data <- as.data.frame(t(readRDS(file = "Data/Simulation_2/Summary/Altm_COND_pval.RDS"))) %>% 
+        gather(value = "p-value", 
+               key = "Predictor")
+    
+    p <- ggplot(data = data) +
+        ggtitle("Altmann et al. (2010) p-value for Conditional Variable Importance") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p
+}
+
 HU_pval_INC_MSE_vis_2 <- function(){
     data <- as.data.frame(t(readRDS(file = "Data/Simulation_2/Summary/HU_INC_MSE_pval.RDS"))) %>% 
         gather(value = "p-value", 
@@ -495,6 +517,28 @@ HU_pval_UNCOND_vis_2 <- function(){
     
     p <- ggplot(data = data) +
         ggtitle("Hapfelmeier and Ulm (2013) p-value for Unconditional Variable Importance") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p
+}
+
+HU_pval_COND_vis_2 <- function(){
+    data <- as.data.frame(t(readRDS(file = "Data/Simulation_2/Summary/HU_COND_pval.RDS"))) %>% 
+        gather(value = "p-value", 
+               key = "Predictor")
+    
+    p <- ggplot(data = data) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for Conditional Variable Importance") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
