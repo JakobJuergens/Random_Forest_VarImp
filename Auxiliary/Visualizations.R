@@ -722,12 +722,56 @@ HU_pval_COND_vis_2 <- function(){
 
 ### Application Visualizations
 
-appl_CAR_rf_VARIMP_vis <- function(){
-    data <- readRDS("Data/Application/importances.RDS")[, 1:2]
+appl_CART_rf_VARIMP_vis <- function(){
+    data <- cbind(c('chol', 'stab.glu', 'hdl', 'ratio', 'location', 'age',
+                    'gender', 'height', 'weight', 'frame', 'bp.1s', 'bp.1d', 
+                    'waist', 'hip', 'time.ppn'),
+                  readRDS("Data/Application/importances.RDS")[, 1:2]) %>% 
+        gather(key = 'Method', value = 'Value', -1)
+    
+    names(data)[1] <- 'Predictor'
+    
+    p <- ggplot(data = data) +
+        ggtitle("CART RF - Variable Importances") +
+        geom_point(aes(x = Predictor, y = Value)) +
+        theme_light() +
+        coord_flip() +
+        facet_grid(cols = vars(Method), scales = "free") +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"),
+              strip.text.x = element_text(size=12, family="Serif"))
+    
+    p
 }
 
 appl_CIT_rf_VARIMP_vis <- function(){
-    data <- readRDS("Data/Application/importances.RDS")[, 3:4]
+    data <- cbind(c('chol', 'stab.glu', 'hdl', 'ratio', 'location', 'age',
+                    'gender', 'height', 'weight', 'frame', 'bp.1s', 'bp.1d', 
+                    'waist', 'hip', 'time.ppn'),
+                  readRDS("Data/Application/importances.RDS")[, 3:4]) %>% 
+        gather(key = 'Method', value = 'Value', -1)
+    
+    names(data)[1] <- 'Predictor'
+    
+    p <- ggplot(data = data) +
+        ggtitle("CIT RF - Variable Importances") +
+        geom_point(aes(x = Predictor, y = Value)) +
+        theme_light() +
+        coord_flip() +
+        facet_grid(cols = vars(Method), scales = "free") +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"),
+              strip.text.x = element_text(size=12, family="Serif"))
+    
+    p
 }
 
 appl_Altm_vis <- function(){
