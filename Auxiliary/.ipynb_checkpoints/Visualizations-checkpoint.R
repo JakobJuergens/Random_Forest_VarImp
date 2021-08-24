@@ -719,3 +719,21 @@ HU_pval_COND_vis_2 <- function(){
     p1 + p2
 
 }
+
+### Application Visualizations
+
+appl_CAR_rf_VARIMP_vis <- function(){
+    data <- readRDS("Data/Application/importances.RDS")[, 1:2]
+}
+
+appl_CIT_rf_VARIMP_vis <- function(){
+    data <- readRDS("Data/Application/importances.RDS")[, 3:4]
+}
+
+appl_Altm_vis <- function(){
+    data <- readRDS("Data/Application/Altm_p_values.RDS")
+}
+
+apps_HU_vis <- function(){
+    data <- readRDS("Data/Application/HU_p_values.RDS")
+}
