@@ -395,6 +395,7 @@ Altm_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -409,6 +410,7 @@ Altm_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -438,6 +440,7 @@ Altm_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -452,6 +455,7 @@ Altm_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -480,6 +484,7 @@ Altm_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -494,6 +499,7 @@ Altm_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -522,6 +528,7 @@ Altm_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -536,6 +543,7 @@ Altm_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -565,6 +573,7 @@ HU_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -579,6 +588,7 @@ HU_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -608,6 +618,7 @@ HU_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -622,6 +633,7 @@ HU_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -651,6 +663,7 @@ HU_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -665,6 +678,7 @@ HU_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -694,6 +708,7 @@ HU_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -708,6 +723,7 @@ HU_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -722,18 +738,108 @@ HU_pval_COND_vis_2 <- function(){
 
 ### Application Visualizations
 
-appl_CAR_rf_VARIMP_vis <- function(){
-    data <- readRDS("Data/Application/importances.RDS")[, 1:2]
+appl_CART_rf_VARIMP_vis <- function(){
+    data <- cbind(c('chol', 'stab.glu', 'hdl', 'ratio', 'location', 'age',
+                    'gender', 'height', 'weight', 'frame', 'bp.1s', 'bp.1d', 
+                    'waist', 'hip', 'time.ppn'),
+                  readRDS("Data/Application/importances.RDS")[, 1:2]) %>% 
+        gather(key = 'Method', value = 'Value', -1)
+    
+    names(data)[1] <- 'Predictor'
+    
+    p <- ggplot(data = data) +
+        ggtitle("CART RF - Variable Importances") +
+        geom_point(aes(x = Predictor, y = Value)) +
+        theme_light() +
+        coord_flip() +
+        facet_grid(cols = vars(Method), scales = "free") +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"),
+              strip.text.x = element_text(size=12, family="Serif"))
+    
+    p
 }
 
 appl_CIT_rf_VARIMP_vis <- function(){
-    data <- readRDS("Data/Application/importances.RDS")[, 3:4]
+    data <- cbind(c('chol', 'stab.glu', 'hdl', 'ratio', 'location', 'age',
+                    'gender', 'height', 'weight', 'frame', 'bp.1s', 'bp.1d', 
+                    'waist', 'hip', 'time.ppn'),
+                  readRDS("Data/Application/importances.RDS")[, 3:4]) %>% 
+        gather(key = 'Method', value = 'Value', -1)
+    
+    names(data)[1] <- 'Predictor'
+    
+    p <- ggplot(data = data) +
+        ggtitle("CIT RF - Variable Importances") +
+        geom_point(aes(x = Predictor, y = Value)) +
+        theme_light() +
+        coord_flip() +
+        facet_grid(cols = vars(Method), scales = "free") +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"),
+              strip.text.x = element_text(size=12, family="Serif"))
+    
+    p
 }
 
 appl_Altm_vis <- function(){
-    data <- readRDS("Data/Application/Altm_p_values.RDS")
+    data <- cbind(c('chol', 'stab.glu', 'hdl', 'ratio', 'location', 'age',
+                    'gender', 'height', 'weight', 'frame', 'bp.1s', 'bp.1d', 
+                     'waist', 'hip', 'time.ppn'),
+        readRDS("Data/Application/Altm_p_values.RDS")) %>% 
+        gather(key = 'Method', value = 'p-value', -1)
+    names(data)[1] <- 'Predictor'
+    
+    p <- ggplot(data = data) +
+        ggtitle("p-values generated by Altmann et al. (2010) method") +
+        geom_point(aes(x = Predictor, y = `p-value`, col = Method, shape = Method), 
+                   size = 3, position = position_jitter(w = 0.35, h = 0)) +
+        geom_hline(yintercept = 0.05, col = "red", alpha = 0.5) +
+        coord_flip() +
+        theme_light() +
+        theme(legend.position = "bottom") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"),
+              legend.title = element_text(size=12, family="Serif"),
+              legend.text = element_text(size=12, family="Serif"))
+    
+    p
 }
 
-apps_HU_vis <- function(){
-    data <- readRDS("Data/Application/HU_p_values.RDS")
+appl_HU_vis <- function(){
+    data <- cbind(c('chol', 'stab.glu', 'hdl', 'ratio', 'location', 'age',
+                    'gender', 'height', 'weight', 'frame', 'bp.1s', 'bp.1d', 
+                    'waist', 'hip', 'time.ppn'),
+                  readRDS("Data/Application/HU_p_values.RDS")) %>% 
+        gather(key = 'Method', value = 'p-value', -1)
+    names(data)[1] <- 'Predictor'
+    
+    p <- ggplot(data = data) +
+        ggtitle("p-values generated by Hapfelmeier and Ulm (2013) method") +
+        geom_point(aes(x = Predictor, y = `p-value`, col = Method, shape = Method), 
+                   size = 3, position = position_jitter(w = 0.35, h = 0)) +
+        geom_hline(yintercept = 0.05, col = "red", alpha = 0.5) +
+        coord_flip() +
+        theme_light() +
+        theme(legend.position = "bottom") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"),
+              legend.title = element_text(size=12, family="Serif"),
+              legend.text = element_text(size=12, family="Serif"))
+    
+    p
 }

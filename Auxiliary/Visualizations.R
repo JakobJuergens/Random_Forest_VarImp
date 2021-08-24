@@ -395,6 +395,7 @@ Altm_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -409,6 +410,7 @@ Altm_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -438,6 +440,7 @@ Altm_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -452,6 +455,7 @@ Altm_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -480,6 +484,7 @@ Altm_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -494,6 +499,7 @@ Altm_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -522,6 +528,7 @@ Altm_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -536,6 +543,7 @@ Altm_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -565,6 +573,7 @@ HU_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -579,6 +588,7 @@ HU_pval_INC_MSE_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -608,6 +618,7 @@ HU_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -622,6 +633,7 @@ HU_pval_INC_NP_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -651,6 +663,7 @@ HU_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -665,6 +678,7 @@ HU_pval_UNCOND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -694,6 +708,7 @@ HU_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
@@ -708,6 +723,7 @@ HU_pval_COND_vis_2 <- function(){
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
                  size = 6, family="Serif") +
+        ylim(0,1) +
         theme_light() +
         theme(legend.position = "none") +
         theme(plot.title = element_text(size=20, family="Serif"),
