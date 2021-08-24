@@ -383,8 +383,14 @@ Altm_pval_INC_MSE_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Altmann et al. (2010) p-value for MSE_INC%") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Altmann et al. (2010) p-value for MSE_INC% - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -397,7 +403,22 @@ Altm_pval_INC_MSE_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Altmann et al. (2010) p-value for MSE_INC% - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
+
 }
 
 Altm_pval_INC_NP_vis_2 <- function(){
@@ -405,8 +426,14 @@ Altm_pval_INC_NP_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Altmann et al. (2010) p-value for NP_INC%") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Altmann et al. (2010) p-value for NP_INC% - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -419,7 +446,21 @@ Altm_pval_INC_NP_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Altmann et al. (2010) p-value for NP_INC% - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
 }
 
 Altm_pval_UNCOND_vis_2 <- function(){
@@ -427,8 +468,14 @@ Altm_pval_UNCOND_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Altmann et al. (2010) p-value for Unconditional Variable Importance") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Altmann et al. (2010) p-value for Unconditional Variable Importance - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -441,7 +488,21 @@ Altm_pval_UNCOND_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Altmann et al. (2010) p-value for Unconditional Variable Importance - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
 }
 
 Altm_pval_COND_vis_2 <- function(){
@@ -449,8 +510,14 @@ Altm_pval_COND_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Altmann et al. (2010) p-value for Conditional Variable Importance") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Altmann et al. (2010) p-value for Conditional Variable Importance - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -463,7 +530,22 @@ Altm_pval_COND_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Altmann et al. (2010) p-value for Conditional Variable Importance - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
+    
 }
 
 HU_pval_INC_MSE_vis_2 <- function(){
@@ -471,8 +553,14 @@ HU_pval_INC_MSE_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Hapfelmeier and Ulm (2013) p-value for MSE_INC%") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for MSE_INC% - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -485,7 +573,22 @@ HU_pval_INC_MSE_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for MSE_INC% - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
+    
 }
 
 HU_pval_INC_NP_vis_2 <- function(){
@@ -493,8 +596,14 @@ HU_pval_INC_NP_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Hapfelmeier and Ulm (2013) p-value for NP_INC%") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for NP_INC% - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -507,7 +616,22 @@ HU_pval_INC_NP_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for NP_INC% - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
+
 }
 
 HU_pval_UNCOND_vis_2 <- function(){
@@ -515,8 +639,14 @@ HU_pval_UNCOND_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Hapfelmeier and Ulm (2013) p-value for Unconditional Variable Importance") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for Unconditional Variable Importance - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -529,7 +659,22 @@ HU_pval_UNCOND_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for Unconditional Variable Importance - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
+    
 }
 
 HU_pval_COND_vis_2 <- function(){
@@ -537,8 +682,14 @@ HU_pval_COND_vis_2 <- function(){
         gather(value = "p-value", 
                key = "Predictor")
     
-    p <- ggplot(data = data) +
-        ggtitle("Hapfelmeier and Ulm (2013) p-value for Conditional Variable Importance") +
+    informative <- data %>% 
+        filter(Predictor %in% c("X_1", "X_3", "X_5", "X_7"))
+    
+    uninformative <- data %>% 
+        filter(Predictor %in% c("X_2", "X_4", "X_6", "X_8"))
+    
+    p1 <- ggplot(data = informative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for Conditional Variable Importance - informative predictors") +
         geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
                     draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
         annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
@@ -551,5 +702,20 @@ HU_pval_COND_vis_2 <- function(){
               axis.text.x = element_text(size=12, family="Serif"),
               axis.text.y = element_text(size=12, family="Serif"))
     
-    p
+    p2 <- ggplot(data = uninformative) +
+        ggtitle("Hapfelmeier and Ulm (2013) p-value for Conditional Variable Importance - uninformative predictors") +
+        geom_violin(aes(x = Predictor, y = `p-value`, fill = Predictor),
+                    draw_quantiles = c(0.25, 0.5, 0.75), trim = TRUE) +
+        annotate("text", x = 1.5, y = 0.85, label = "Horizontal Lines added for \n 25%, 50% and 75% percentile",
+                 size = 6, family="Serif") +
+        theme_light() +
+        theme(legend.position = "none") +
+        theme(plot.title = element_text(size=20, family="Serif"),
+              axis.title.x = element_text(size=16, family="Serif"),
+              axis.title.y = element_text(size=16, family="Serif"),
+              axis.text.x = element_text(size=12, family="Serif"),
+              axis.text.y = element_text(size=12, family="Serif"))
+    
+    p1 + p2
+
 }
