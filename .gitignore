@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Jupyter-generated notebook checkpoints
+.ipynb_checkpoints/
